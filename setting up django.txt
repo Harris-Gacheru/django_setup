@@ -1,0 +1,40 @@
+______________________________________________________________________
+   	
+	SETTING UP DJANGO
+______________________________________________________________________
+1. Run 'pipenv install requests' || 'pipenv install'
+	Generates Pipfile & Pipfile.lock
+
+2. To rebuild an existing app run
+	'pipenv install --deploy' - it installs the exact packages contained in Pipfile.lock
+
+3. Virtual environment location
+	By default pipenv generate venv in a centrally located location.
+	To change the default behaviour and generate venv in the project folder, set this definition in [.bashrc] file
+	
+	'export PIPENV_VENV_IN_PROJECT=1'
+
+	with this pipenv creates [.venv] folder directly in your project.
+
+4. To create a virtual environment run
+	'pipenv install' - it checks if a virtual environment has already been created for the project
+
+	also
+	
+	'python -m venv <name of venv eg .venv>
+
+5. To activate virtual environment run 
+	'pipenv shell'
+
+	Activating venv in project run source <venv name>\Scripts\activate
+
+6. To deactivate run
+	'deactivate'
+
+7. Install django - 'pipenv install django' and any other packages needed
+
+8. Create project
+	'django-admin startproject <project name> .
+
+9. Create app
+	'python manage.py startapp <app name>
